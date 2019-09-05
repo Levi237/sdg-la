@@ -1,10 +1,16 @@
-/* @media screen and (min-width: 767px){ */
+@media screen and (min-width: 767px){
 
-    .container,  .details, .active {
+    .container, .details, .active {
         transition-duration: 5s;
         transition: all .1s ease-in-out;
         /* transform: all 5s; */
         width: 100vw;
+    }
+    .active .details {
+        display: inline-block;
+    }
+    .details {
+        background-color: blue;
     }
     .container .details {
         display: none;
@@ -15,15 +21,4 @@
     .container:hover {
         cursor: pointer;
     }
-    .active .details {
-        display: inline-block;
-    }
-    .details {
-        background-color: blue;
-    }
-/* } */
-
-/* <div id="click" class="container">
-    always visible
-    <div class="details">visible on click</div>
-</div> */
+}
