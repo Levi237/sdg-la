@@ -14,6 +14,7 @@ body {
     font-size: 2.5rem;
     display: inline-block;
     letter-spacing: 0;
+    width: 100px;
     /* margin-top: 30px; */
     /* font-weight: 400; */
 }
@@ -33,5 +34,13 @@ body {
     }
     .detail-section {
         padding-top: 0;
+    }
+    .detail-section > section {
+        /* font-size: 2.5rem; */
+        /* display: inline-block; */
+        /* letter-spacing: 0; */
+        width: 60px;
+        /* margin-top: 30px; */
+        /* font-weight: 400; */
     }
 }
