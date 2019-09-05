@@ -9,17 +9,17 @@
     /* transform: all 5s; */
     width: 20vw;
     text-align: center;
-    margin: 0;
 }
 .title .details {
     display: none;
 }
 .title {
+    margin: 0 -3px;
     background-color: white;
     display: inline-block;
     border: 1px solid black;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 .title:hover {
     cursor: pointer;
