@@ -1,5 +1,5 @@
 #container {
-    margin: 0 auto;
+    margin: 100px auto;
     text-align: center;
 }
 
@@ -14,8 +14,11 @@
     display: none;
 }
 .title {
-    background-color: orange;
+    background-color: white;
     display: inline-block;
+    border: 1px solid black;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 .title:hover {
     cursor: pointer;
@@ -29,9 +32,17 @@
 .details {
     background-color: purple;
 }
+.active {
+    background-color: black;
+    color: white;
+}
 
 
 @media screen and (max-width: 767px){
+    #container {
+        margin: 0;
+        text-align: justify;
+    }
     .title, .details, .active {
         /* transition-duration: 5s; */
         /* transition: all .1s ease-in-out; */
@@ -42,7 +53,17 @@
         display: none;
     }
     .title {
-        background-color: yellow;
+        /* font-weight: bold; */
+        /* letter-spacing: 1px; */
+        /* background-color: white; */
+        /* display: inline-block; */
+        border-right: none;
+        border-top: none;
+        border-left: none;
+        border-bottom: 1px solid black;
+        font-size: .8rem;
+        /* padding: 10px; */
+        text-align: left;
     }
     /* .title:hover {
         cursor: pointer;
@@ -53,5 +74,9 @@
     }
     .details {
         background-color: blue;
+    }
+    .active {
+        background-color: white;
+        color: black;
     }
 }
