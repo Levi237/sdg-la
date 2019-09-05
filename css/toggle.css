@@ -93,7 +93,7 @@ span {
         border-top: none;
         border-left: none;
         border-bottom: 1px solid black;
-        font-size: .8rem;
+        /* font-size: .8rem; */
         /* padding: 10px; */
         text-align: left;
     }
@@ -111,12 +111,11 @@ span {
         background-color: white;
         color: black;
     }
-    .active span {
-        display: inline-block !important;
+    .active > span {
+        display: inline-block;
     }
     .active .plus {
-        visibility: hidden;
-        display: none !important;
+        display: none;
 
     }
     

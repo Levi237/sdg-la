@@ -1,17 +1,33 @@
 html {
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
+    font-family: Arial, Helvetica, sans-serif, sans-serif
 }
 
 body {
     margin: 0;
     /* transition: all .1s ease-in-out; */
 }
+.detail-section {
+    padding-top: 30px;
+}
+.detail-section > section {
+    font-size: 2.5em;
+    display: inline-block;
+    /* margin-top: 30px; */
+    /* font-weight: 400; */
+}
 
+.detail-section > section > div {
+    font-size: 1rem;
+    /* background-color: purple; */
+}
 
 /* @ @media query 767px to transition between phone and desktop */
 /* NO NEED FOR GRID */
 /* Check work and adjust grid to work with all browsers include IE */
 
 @media screen and (max-width: 767px){
-
+    html {
+        font-size: 12px;
+    }
 }
