@@ -53,9 +53,12 @@ p {
     color: white;
 }
 
-.mobile-symbol {
+span {
     display: none
 }
+
+
+
 
 @media screen and (max-width: 767px){
     section {
@@ -63,7 +66,7 @@ p {
         display: inline-block;
     }
     p {
-        padding: 0 20px;
+        padding: 10px 20px 30px 20px;
         width: 80vw;
         margin: 0 auto;
     }
@@ -108,7 +111,20 @@ p {
         background-color: white;
         color: black;
     }
-    .mobile-symbol {
+    .active span {
+        display: inline-block !important;
+    }
+    .active .plus {
+        visibility: hidden;
+        display: none !important;
+
+    }
+    
+    .minus {
+        display: none;
+    }
+
+    span {
         position: relative;
         display: inline-block;
         float: right;
