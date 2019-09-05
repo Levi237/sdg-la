@@ -11,14 +11,15 @@ body {
     padding-top: 30px;
 }
 .detail-section > section {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     display: inline-block;
+    letter-spacing: 0;
     /* margin-top: 30px; */
     /* font-weight: 400; */
 }
 
 .detail-section > section > div {
-    font-size: 1rem;
+    font-size: .5em;
     /* background-color: purple; */
 }
 
