@@ -1,3 +1,12 @@
+section {
+    padding: 10px;
+}
+
+p {
+    padding: 20px;
+}
+
+
 #container {
     margin: 100px auto;
     text-align: center;
@@ -41,7 +50,19 @@
 }
 
 
+.mobile-symbol {
+    display: none
+}
+
 @media screen and (max-width: 767px){
+    section {
+        padding: 16px;
+        display: inline-block;
+    }
+    p {
+        padding: 0 20px;
+    }
+
     #container {
         margin: 0;
         text-align: justify;
@@ -81,5 +102,11 @@
     .active {
         background-color: white;
         color: black;
+    }
+    .mobile-symbol {
+        position: relative;
+        display: inline-block;
+        float: right;
+        margin: 16px;
     }
 }
