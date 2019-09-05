@@ -31,4 +31,7 @@ body {
     html {
         font-size: 12px;
     }
+    .detail-section {
+        padding-top: 0;
+    }
 }
