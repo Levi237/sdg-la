@@ -6,10 +6,16 @@ body {
     margin: 0;
 }
 
+section {
+    padding: 10px;
+}
+
 /* @ @media query 767px to transition between phone and desktop */
 /* NO NEED FOR GRID */
 /* Check work and adjust grid to work with all browsers include IE */
 
-@media screen and (min-width: 767px){
-
+@media screen and (max-width: 767px){
+    section {
+        padding: 16px;
+    }
 }

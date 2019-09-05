@@ -9,6 +9,7 @@
     /* transform: all 5s; */
     width: 20vw;
     text-align: center;
+    margin: 0;
 }
 .title .details {
     display: none;
@@ -30,7 +31,9 @@
     left: 0;
 }
 .details {
-    background-color: purple;
+    color: black;
+    font-weight: 400;
+    /* background-color: purple; */
 }
 .active {
     background-color: black;
@@ -73,7 +76,7 @@
         position: relative;
     }
     .details {
-        background-color: blue;
+        /* background-color: blue; */
     }
     .active {
         background-color: white;
