@@ -22,9 +22,6 @@ hr {
     margin: 0 auto 3px auto;
 }
 
-/**************************************************************************************************/
-/********************************* CONTAINER FOR OBJECTS IN ARRAY *********************************/
-/**************************************************************************************************/
 #container {
     margin: 100px auto;
     text-align: center;
@@ -39,7 +36,6 @@ hr {
     display: none;
 }
 .title {
-    /* transition: all 2s ease-out; */
     margin: 0 -3px;
     background-color: #fff;
     display: inline-block;
@@ -48,7 +44,6 @@ hr {
     letter-spacing: 1px;
 }
 .title > section:hover {
-    /* transition: all 2s ease; */
     cursor: pointer;
     background-color: #d3d3d3;
 }
@@ -104,8 +99,6 @@ hr {
 }
 
 
-
-
 @media screen and (max-width: 767px){
     html {
         font-size: 12px;
@@ -155,7 +148,6 @@ hr {
         background-color: transparent;
     }
     .title > section:hover {
-        /* cursor: pointer; */
         background-color: transparent;
     }
     .active .details {
