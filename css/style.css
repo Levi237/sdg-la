@@ -1,40 +1,37 @@
-* {
-    transition: all .2s ease-in-out;
-}
 html {
     font-family: Helvetica, Arial, sans-serif
 }
 body {
     margin: 0;
 }
+
 section {
     padding: 8px;
+    -webkit-transition:all 1s ease 0s;
+    -moz-transition:all 1s ease 0s;
+    -o-transition:all 1s ease 0s;
+    transition:all 1s ease 0s;
 }
-
 p {
     padding: 20px;
     width: 80vw;
     margin: 0 auto;
 }
+hr {
+    width: 40px; 
+    margin: 0 auto 3px auto;
+}
 
+/**************************************************************************************************/
+/********************************* CONTAINER FOR OBJECTS IN ARRAY *********************************/
+/**************************************************************************************************/
 #container {
     margin: 100px auto;
     text-align: center;
     height: 100vh;
 }
-.transit {
-    /* transition: all .5s ease-in-out 0; */
-    /* transition-property: all;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0.3s; */
-}
-
 
 .title, .details, .active {
-    /* transition-duration: 5s; */
-    transition: max-height .5s ease;
-    /* transform: all 5s; */
     width: 20vw;
     text-align: center;
 }
@@ -42,18 +39,20 @@ p {
     display: none;
 }
 .title {
+    /* transition: all 2s ease-out; */
     margin: 0 -3px;
     background-color: #fff;
     display: inline-block;
     border: 1px solid #000;
     font-weight: 600;
     letter-spacing: 1px;
-
 }
 .title > section:hover {
+    /* transition: all 2s ease; */
     cursor: pointer;
     background-color: #d3d3d3;
 }
+
 .active .details {
     position: absolute;
     display: block;
@@ -67,15 +66,12 @@ p {
 .active {
     background-color: #000;
     color: #fff;
-
 }
 
 .plus, .minus {
     display: none
 }
-/**************************************************************************************************/
-/********************************** Detail Section for Materials **********************************/
-/**************************************************************************************************/
+
 .detail-section {
     padding-top: 30px;
 }
@@ -91,13 +87,6 @@ p {
     font-size: .5em;
     font-weight: 100;
 }
-hr {
-    width: 40px; 
-    margin: 0 auto 3px auto;
-}
-/*************************************************************************************************/
-/********************************** CREATE PLUS AND MINUS SIGNS **********************************/
-/*************************************************************************************************/
 
 .minus-sign {
     border-top: 1px solid #000;
@@ -106,7 +95,6 @@ hr {
     height: 11px;
     margin-bottom: -6px;
 }
-
 .plus-sign {
     border-left: 1px solid #000;
     display: inline-block;
@@ -117,28 +105,10 @@ hr {
 
 
 
-/*************************************************************************************************/
-/**********************************   MEDIA QUERY PHONE SPECS   **********************************/
-/**********************************       767px PHONE/DESKTOP   **********************************/
-/*************************************************************************************************/
+
 @media screen and (max-width: 767px){
     html {
         font-size: 12px;
-    }
-    .detail-section {
-        padding-top: 0;
-    }
-    .detail-section > section {
-        font-size: 3em;
-        width: 30vw;
-        padding: 0;
-    }
-    hr {
-        margin: 25px auto 10px auto;
-
-    }
-    .detail-section > section > div {
-        font-size: .4em;
     }
     section {
         padding: 16px;
@@ -149,21 +119,30 @@ hr {
         width: 80vw;
         margin: 0 auto;
     }
+    hr {
+        margin: 25px auto 10px auto;
+    }
 
     #container {
         margin: 0;
         text-align: justify;
     }
-    .title, .details, .active {
-        width: 100vw;
+    .details {
+        -webkit-transition: max-height 1.5s ease 0s;
+        -moz-transition: max-height 1.5s ease 0s;
+        -o-transition: max-height 1.5s ease 0s;
+        transition: max-height 1.5s ease 0s;
     }
+
     .title .details {
+        width: 100vw;
         display: block;
         max-height: 0;
         overflow: hidden;
 
     }
     .title {
+        width: 100vw;
         margin: 0;
         border-right: none;
         border-top: none;
@@ -171,24 +150,22 @@ hr {
         border-bottom: 1px solid #000;
         text-align: left;
     }
-    .title > section:hover {
-        cursor: pointer;
-        background-color: none;
-    }
     .title:hover {
-        background-color: #d3d3d3;
-        margin: -2px 0 0 0;
+        cursor: pointer;
+        background-color: transparent;
+    }
+    .title > section:hover {
+        /* cursor: pointer; */
+        background-color: transparent;
     }
     .active .details {
         display: inline-block;
         position: relative;
         max-height: 1000em;
-
     }
     .active {
         background-color: #fff;
         color: #000;
-        /* height: calc(100vh - 94px); */
         overflow: auto;
     }
     .active .minus {
@@ -210,5 +187,17 @@ hr {
         float: right;
         margin: 16px;
         max-width: 20px;
+    }
+
+    .detail-section {
+        padding-top: 0;
+    }
+    .detail-section > section {
+        font-size: 3em;
+        width: 30vw;
+        padding: 0;
+    }
+    .detail-section > section > div {
+        font-size: .4em;
     }
 }
