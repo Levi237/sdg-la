@@ -100,9 +100,14 @@ span {
         /* padding: 10px; */
         text-align: left;
     }
-    /* .title:hover {
+    .title > section:hover {
         cursor: pointer;
-    } */
+        background-color: none;
+    }
+    .title:hover {
+        background-color: lightgray;
+        /* cursor: pointer; */
+    }
     .active .details {
         display: inline-block;
         position: relative;
