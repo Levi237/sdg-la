@@ -13,6 +13,7 @@ p {
 #container {
     margin: 100px auto;
     text-align: center;
+    height: 100vh;
 }
 
 .title, .details, .active {
@@ -51,6 +52,7 @@ p {
 .active {
     background-color: black;
     color: white;
+
 }
 
 span {
@@ -111,6 +113,7 @@ span {
     .active {
         background-color: white;
         color: black;
+        height: calc(100vh - 93px)
     }
     .active > span {
         display: inline-block;
