@@ -17,7 +17,7 @@ p {
 
 .title, .details, .active {
     /* transition-duration: 5s; */
-    transition: all .5s ease-in-out;
+    /* transition: all .5s ease-in-out; */
     /* transform: all 5s; */
     width: 20vw;
     text-align: center;
@@ -33,7 +33,7 @@ p {
     font-weight: 600;
     letter-spacing: 1px;
 }
-.title:hover {
+.title> section:hover {
     cursor: pointer;
     background-color: lightgray;
 }

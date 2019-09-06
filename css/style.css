@@ -1,3 +1,7 @@
+* {
+    transition: all .3s ease-in-out;
+}
+
 html {
     /* font-family: sans-serif; */
     font-family: Arial, Helvetica, sans-serif, sans-serif
