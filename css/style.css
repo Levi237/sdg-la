@@ -1,21 +1,81 @@
 * {
     transition: all .2s ease-in-out;
 }
-
 html {
-    /* font-family: sans-serif; */
     font-family: Helvetica, Arial, sans-serif
 }
-
 body {
     margin: 0;
-    /* transition: all .1s ease-in-out; */
+}
+section {
+    padding: 8px;
 }
 
-hr {
-    width: 40px; 
-    margin: 0 auto 3px auto;
+p {
+    padding: 20px;
+    width: 80vw;
+    margin: 0 auto;
 }
+
+#container {
+    margin: 100px auto;
+    text-align: center;
+    height: 100vh;
+}
+.transit {
+    transition: all .5s ease-in-out 0;
+    /* transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.3s; */
+}
+
+
+.title, .details, .active {
+    /* transition-duration: 5s; */
+    /* transition: all .5s ease-in-out; */
+    /* transform: all 5s; */
+    width: 20vw;
+    text-align: center;
+}
+.title .details {
+    display: none;
+}
+.title {
+    margin: 0 -3px;
+    background-color: #fff;
+    display: inline-block;
+    border: 1px solid #000;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+.title > section:hover {
+    cursor: pointer;
+    background-color: rgb(211, 211, 211);
+}
+.active .details {
+    position: absolute;
+    display: block;
+    width: 100vw;
+    left: 0;
+}
+.details {
+    color: #000;
+    font-weight: 400;
+}
+.active {
+    background-color: #000;
+    color: #fff;
+
+}
+
+.plus, .minus {
+    display: none
+}
+/**************************************************************************************************/
+/********************************** Detail Section for Materials **********************************/
+/**************************************************************************************************/
 .detail-section {
     padding-top: 30px;
 }
@@ -26,50 +86,41 @@ hr {
     width: 100px;
     font-family: Arial, Helvetica, sans-serif, sans-serif;
     padding: 20px;
-    /* margin-top: 30px; */
-    /* font-weight: 400; */
 }
-
 .detail-section > section > div {
     font-size: .5em;
-    /* background-color: purple; */
+    font-weight: 100;
 }
-
-
-/* CREATE PLUS AND MINUS SIGNS */
+hr {
+    width: 40px; 
+    margin: 0 auto 3px auto;
+}
+/*************************************************************************************************/
+/********************************** CREATE PLUS AND MINUS SIGNS **********************************/
+/*************************************************************************************************/
 
 .minus-sign {
-    border-top: 2px solid #000;
-    /* margin-left: 300px; */
-    /* margin-top: 300px; */
+    border-top: 1px solid #000;
     display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin-bottom: -7px;
-    /* border-left: 2px solid green; */
-    /* margin-left: 2px; */
-    /* border-top: 40px solid transparent; */
-    /* border-bottom: 40px solid transparent;  */
+    width: 11px;
+    height: 11px;
+    margin-bottom: -6px;
 }
 
 .plus-sign {
-    border-left: 2px solid #000;
-    /* margin-left: 300px; */
-    /* margin-top: 300px; */
+    border-left: 1px solid #000;
     display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin-left: -7px;
+    width: 11px;
+    height: 11px;
+    margin-left: -6px;
 }
 
 
 
-
-
-/* @ @media query 767px to transition between phone and desktop */
-/* NO NEED FOR GRID */
-/* Check work and adjust grid to work with all browsers include IE */
-
+/*************************************************************************************************/
+/**********************************   MEDIA QUERY PHONE SPECS   **********************************/
+/**********************************       767px PHONE/DESKTOP   **********************************/
+/*************************************************************************************************/
 @media screen and (max-width: 767px){
     html {
         font-size: 12px;
@@ -78,11 +129,80 @@ hr {
         padding-top: 0;
     }
     .detail-section > section {
-        /* font-size: 2.5rem; */
-        /* display: inline-block; */
-        /* letter-spacing: 0; */
-        width: 60px;
-        /* margin-top: 30px; */
-        /* font-weight: 400; */
+        font-size: 3em;
+        width: 30vw;
+        padding: 0;
+    }
+    hr {
+        margin: 25px auto 10px auto;
+
+    }
+    .detail-section > section > div {
+        font-size: .4em;
+    }
+    section {
+        padding: 16px;
+        display: inline-block;
+    }
+    p {
+        padding: 10px 15px 30px 20px;
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    #container {
+        margin: 0;
+        text-align: justify;
+    }
+    .title, .details, .active {
+        width: 100vw;
+    }
+    .title .details {
+        display: none;
+    }
+    .title {
+        margin: 0;
+        border-right: none;
+        border-top: none;
+        border-left: none;
+        border-bottom: 1px solid #000;
+        text-align: left;
+    }
+    .title > section:hover {
+        cursor: pointer;
+        background-color: none;
+    }
+    .title:hover {
+        background-color: lightgray;
+    }
+    .active .details {
+        display: inline-block;
+        position: relative;
+    }
+    .active {
+        background-color: #fff;
+        color: #000;
+        height: calc(100vh - 94px);
+        overflow: auto;
+    }
+    .active .minus {
+        position: relative;
+        display: inline-block;
+        float: right;
+        margin: 16px 22px 16px 16px;
+        max-width: 20px;
+    }
+    .active > .plus {
+        display: inline-block;
+    }
+    .active .plus {
+        display: none;
+    }
+    .plus {
+        position: relative;
+        display: inline-block;
+        float: right;
+        margin: 16px;
+        max-width: 20px;
     }
 }

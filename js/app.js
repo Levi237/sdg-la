@@ -30,28 +30,18 @@ const thisContainer = document.getElementById('container')
 //********************************************************************************//
 
 // next goal is to loop through details??????????
-{/* <div class="minus-sign"></div><div class="plus-sign"></div> */}
+
 const launchData = () => {
     data.map(data => {
         if (data.details) {
-            thisContainer.insertAdjacentHTML('afterbegin', `<div id="${data.id}" class="title"><section>${data.title}</section><div class="plus"><div class="minus-sign"></div><div class="plus-sign"></div></div><div class="minus"><div class="minus-sign"></div></div><div class="details"><div class="detail-section"><section>${data.details[0].percentage}%<div>${data.details[0].name}</div></section><section>${data.details[1].percentage}%<div>${data.details[1].name}</div></section><section>${data.details[2].percentage}%<div>${data.details[2].name}</div></section></div><hr><p>${data.paragraph}</p></div></div>`);
-        } else {
-            thisContainer.insertAdjacentHTML('afterbegin', `<div id="${data.id}" class="title"><section>${data.title}</section><div class="plus"><div class="minus-sign"></div><div class="plus-sign"></div></div><div class="minus"><div class="minus-sign"></div></div><div class="details"><div class="detail-section"></div><p>${data.paragraph}</p></div></div>`);
+            thisContainer.insertAdjacentHTML('afterbegin', `<div id="${data.id}" class="title transit"><section>${data.title}</section><div class="plus"><div class="minus-sign"></div><div class="plus-sign"></div></div><div class="minus"><div class="minus-sign"></div></div><div class="details"><div class="detail-section"><section>${data.details[0].percentage}%<div>${data.details[0].name}</div></section><section>${data.details[1].percentage}%<div>${data.details[1].name}</div></section><section>${data.details[2].percentage}%<div>${data.details[2].name}</div></section></div><hr><p>${data.paragraph}</p></div></div>`);
+        } 
+        else {
+            thisContainer.insertAdjacentHTML('afterbegin', `<div id="${data.id}" class="title transit"><section>${data.title}</section><div class="plus"><div class="minus-sign"></div><div class="plus-sign"></div></div><div class="minus"><div class="minus-sign"></div></div><div class="details"><div class="detail-section"></div><p>${data.paragraph}</p></div></div>`);
         }
     });
 }
 launchData();
-
-// const launchData = () => {
-//     data.map(data => {
-//         if (data.details) {
-//             thisContainer.insertAdjacentHTML('afterbegin', `<div id="${data.id}" class="title"><section>${data.title}</section><span class="plus">+</span><span class="minus">-</span><div class="details"><div class="detail-section"><section>${data.details[0].percentage}%<div>${data.details[0].name}</div></section><section>${data.details[1].percentage}%<div>${data.details[1].name}</div></section><section>${data.details[2].percentage}%<div>${data.details[2].name}</div></section></div><hr><p>${data.paragraph}</p></div></div>`);
-//         } else {
-//             thisContainer.insertAdjacentHTML('afterbegin', `<div id="${data.id}" class="title"><section>${data.title}</section><span class="plus">+</span><span class="minus">-</span><div class="details"><div class="detail-section"></div><p>${data.paragraph}</p></div></div>`);
-//         }
-//     });
-// }
-// launchData();
 
 //********************************************************************************//
 //*****************************   ACCORDIAN TOGGLE   *****************************//
@@ -65,7 +55,6 @@ onFitGuide.addEventListener('click', (e) => {
     onCare.classList.remove('active');
     onMaterials.classList.remove('active');
 })
-
 onCare.addEventListener('click', (e) => {
     toggle(e);
     onMaterials.classList.remove('active');
@@ -80,8 +69,3 @@ onMaterials.addEventListener('click', (e) => {
 toggle = e => {
     e.currentTarget.classList.toggle('active');
 }
-
-
-
-
-
