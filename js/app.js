@@ -34,9 +34,9 @@ const thisContainer = document.getElementById('container')
 const launchData = () => {
     data.map(data => {
         if (data.details) {
-            thisContainer.insertAdjacentHTML('afterbegin', `<div id="${data.id}" class="title"><section>${data.title}</section><div class="plus"><div class="minus-sign"></div><div class="plus-sign"></div></div><div class="details"><div class="detail-section"><section>${data.details[0].percentage}%<div>${data.details[0].name}</div></section><section>${data.details[1].percentage}%<div>${data.details[1].name}</div></section><section>${data.details[2].percentage}%<div>${data.details[2].name}</div></section></div><hr><p>${data.paragraph}</p></div></div>`);
+            thisContainer.insertAdjacentHTML('afterbegin', `<div id="${data.id}" class="title"><section>${data.title}</section><div class="plus"><div class="minus-sign"></div><div class="plus-sign"></div></div><div class="minus"><div class="minus-sign"></div></div><div class="details"><div class="detail-section"><section>${data.details[0].percentage}%<div>${data.details[0].name}</div></section><section>${data.details[1].percentage}%<div>${data.details[1].name}</div></section><section>${data.details[2].percentage}%<div>${data.details[2].name}</div></section></div><hr><p>${data.paragraph}</p></div></div>`);
         } else {
-            thisContainer.insertAdjacentHTML('afterbegin', `<div id="${data.id}" class="title"><section>${data.title}</section><div class="plus"><div class="minus-sign"></div><div class="plus-sign"></div></div><div class="details"><div class="detail-section"></div><p>${data.paragraph}</p></div></div>`);
+            thisContainer.insertAdjacentHTML('afterbegin', `<div id="${data.id}" class="title"><section>${data.title}</section><div class="plus"><div class="minus-sign"></div><div class="plus-sign"></div></div><div class="minus"><div class="minus-sign"></div></div><div class="details"><div class="detail-section"></div><p>${data.paragraph}</p></div></div>`);
         }
     });
 }

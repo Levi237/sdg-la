@@ -39,7 +39,7 @@ hr {
 /* CREATE PLUS AND MINUS SIGNS */
 
 .minus-sign {
-    border-top: 2px solid green;
+    border-top: 2px solid #000;
     /* margin-left: 300px; */
     /* margin-top: 300px; */
     display: inline-block;
@@ -53,7 +53,7 @@ hr {
 }
 
 .plus-sign {
-    border-left: 2px solid green;
+    border-left: 2px solid #000;
     /* margin-left: 300px; */
     /* margin-top: 300px; */
     display: inline-block;

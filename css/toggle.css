@@ -28,15 +28,15 @@ p {
 }
 .title {
     margin: 0 -3px;
-    background-color: white;
+    background-color: #fff;
     display: inline-block;
-    border: 1px solid black;
+    border: 1px solid #000;
     font-weight: 600;
     letter-spacing: 1px;
 }
 .title > section:hover {
     cursor: pointer;
-    background-color: lightgray;
+    background-color: rgb(211, 211, 211);
 }
 .active .details {
     position: absolute;
@@ -45,13 +45,13 @@ p {
     left: 0;
 }
 .details {
-    color: black;
+    color: #000;
     font-weight: 400;
     /* background-color: purple; */
 }
 .active {
-    background-color: black;
-    color: white;
+    background-color: #000;
+    color: #fff;
 
 }
 
@@ -59,7 +59,9 @@ p {
     display: none
 }
 
-
+.minus {
+    display: none;
+}
 
 
 @media screen and (max-width: 767px){
@@ -90,12 +92,12 @@ p {
         margin: 0;
         /* font-weight: bold; */
         /* letter-spacing: 1px; */
-        /* background-color: white; */
+        /* background-color: #fff; */
         /* display: inline-block; */
         border-right: none;
         border-top: none;
         border-left: none;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #000;
         /* font-size: .8rem; */
         /* padding: 10px; */
         text-align: left;
@@ -116,8 +118,8 @@ p {
         /* background-color: blue; */
     }
     .active {
-        background-color: white;
-        color: black;
+        background-color: #fff;
+        color: #000;
         height: calc(100vh - 93px)
     }
     .active > .plus {
@@ -127,10 +129,15 @@ p {
         display: none;
 
     }
-    
-    .minus {
-        display: none;
+    .active .minus {
+        position: relative;
+        display: inline-block;
+        float: right;
+        margin: 16px 22px 16px 16px;
+        max-width: 20px;
     }
+    
+
 
     .plus {
         position: relative;
